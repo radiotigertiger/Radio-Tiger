@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Радио Тигр</title>
+  <style>
+    body {
+      margin: 0;
+      background: url('https://cdn.pixabay.com/photo/2023/04/04/14/30/pixel-art-7898121_1280.png') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+      padding: 20px;
+    }
+
+    h1 {
+      font-weight: 400;
+      margin-bottom: 20px;
+      font-size: 2em;
+      text-shadow: 1px 1px 2px #000;
+    }
+
+    .player-container {
+      width: 100%;
+      max-width: 600px;
+      border-radius: 12px;
+      overflow: hidden;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 10px;
+      display: none;
+    }
+
+    .play-button {
+      background-color: #ff9800;
+      border: none;
+      color: white;
+      padding: 12px 24px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 12px;
+      cursor: pointer;
+      border-radius: 6px;
+      box-shadow: 0px 2px 6px rgba(0,0,0,0.3);
+      transition: background-color 0.3s ease;
+    }
+
+    .play-button:hover {
+      background-color: #e68900;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.4em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Радио Тигр: бесконечный поток</h1>
+  <button class="play-button" onclick="document.querySelector('.player-container').style.display='block'; this.style.display='none';">▶️ Play</button>
+  <div class="player-container">
+    <iframe 
+      allow="autoplay" 
+      src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/radio_tiger/sets/radio-tigr-mixes&color=%23111111&auto_play=true&show_artwork=false&show_comments=false&visual=true&auto_play=true&shuffle=true">
+    </iframe>
+  </div>
+</body>
+</html>
